@@ -1,0 +1,815 @@
+
+/*Created a grid-structure for all webpages. */
+.grid-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 98vh;
+    position: relative;
+}
+
+
+/*Designed my top border with colors, borders and positioned it.*/
+.topborder {
+    grid-column: 1;
+    grid-row: 1;
+    background: linear-gradient(to right, rgb(57, 13, 57), rgb(99, 23, 99) 70%);
+    position: fixed;
+    width: 57.9%;
+    left: 0;
+    top: 0;
+    border-bottom-style: solid;
+    border-bottom-color: orange;
+    border-bottom-width: 4px;
+    border-bottom-right-radius: 2%;
+    z-index: 2;
+}
+header {
+    margin-left: 10%;
+    color: white;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace
+}
+
+
+/*Created and designed a menu for my top border with it's own grid structure.*/
+.menu {
+    display: grid;
+    grid-template-columns: 60% 30%;
+    grid-template-rows: auto;
+    grid-column: 2; 
+    grid-row: 1;
+    background-color: rgb(99, 23, 99);
+    position: fixed;
+    width: 50%;
+    right: 0;
+    top: 0;
+    border-bottom-left-radius: 75%;
+    border-bottom-style: solid;
+    border-bottom-color: orange;
+    border-bottom-width: 6px;
+    z-index: 1;
+}
+.firstmenu {
+    grid-column: 1;
+    grid-row: 1;
+    margin-left: 60%;
+}
+.secondmenu {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+
+/*Added more design to the menu options.*/
+.firstmenu ul, .secondmenu ul {
+    list-style: none;
+}
+.firstmenu a, .secondmenu a {
+    color: white;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+}
+.firstmenu a:hover, .secondmenu a:hover {
+    text-decoration: underline;
+}
+.firstmenu a:active, .secondmenu a:active {
+    color: orange;
+}
+
+
+/*Positioned my content on the start page and changed font.*/
+.presentation {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 10%;
+    margin-top: 20%;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 100%;
+    padding: 10%;
+}
+.extraHeader {
+    font-weight: bold;
+}
+.aboutbutton {
+    grid-column: 1;
+    grid-row: 3;
+    margin-left: 10%;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 100%;
+    padding: 10%;
+    margin-bottom: 15%;
+}
+
+
+/*Positioned and changed size and radius of the image for the start page.*/
+.imageofme {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    place-items: center;
+    margin-top: 20%;
+}
+.imageofme img {
+    width: 60%;
+    height: 100%;
+    border-radius: 5%;
+}
+
+
+/*Designed the bottom button on every page with colors, transitions, hover and active.*/
+.aboutbutton a, .projectButton a {
+    background-color: orange;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    margin-left: 2%;
+    font-weight: bold;
+    color:rgb(99, 23, 99);
+    text-decoration: none;
+    transition: border-radius 0.3s ease, background-color 0.3s ease;
+}
+.contactButton a, .homeButton a {
+    background-color: orange;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    margin-left: 1%;
+    font-weight: bold;
+    color:rgb(99, 23, 99);
+    text-decoration: none;
+    transition: border-radius 0.3s ease, background-color 0.3s ease;
+}
+.aboutbutton a:hover, .projectButton a:hover, .contactButton a:hover, .homeButton a:hover {
+    border-radius: 100px;
+    background-color: rgb(255, 165, 0, 0.5);
+}
+.aboutbutton a:active, .projectButton a:active, .contactButton a:active, .homeButton a:active {
+    text-decoration: underline;
+}
+
+
+/*Designed the bottom-grid with its own structure but same design as top border.*/
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 200px 70px 50px;
+    grid-template-rows: auto; 
+    align-items: center; 
+    justify-items: start; 
+    grid-column: 1;
+    grid-row: 6;
+    background: linear-gradient(to left, rgb(57, 13, 57), rgb(99, 23, 99) 40%);
+    position: absolute;
+    width: 112%;
+    left: -6%;
+    bottom: -30%;
+    border-top-style: solid;
+    border-top-color: orange;
+    border-top-width: 4px;
+}
+footer {
+    grid-column: 1;
+    grid-row: 1; 
+    margin-left: 20%;
+    color: white;
+    padding: 8%;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 90%;
+}
+.connect {
+    grid-column: 2;
+    grid-row: 1; 
+    color: white;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 90%;
+    padding: 8%;
+    margin-left: 30%;
+}
+.logo { /*Added a linkedin-logo.*/
+    grid-column: 3;
+    grid-row: 1; 
+    margin-left: 45%;
+    font-size: 120%;
+}
+
+
+/*Added more design to the content in the footer.*/
+footer a {
+    color: white;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 90%;
+}
+footer a:active {
+    color: orange;
+}
+.fa-linkedin {
+    color: white;
+}
+.fa-linkedin:active {
+    color: orange;
+}
+.logo a {
+    text-decoration: none;
+}
+
+
+/*Positioned my content on the about page and changed font.*/
+.information {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 10%;
+    margin-top: 20%;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 100%;
+    padding: 10%;
+}
+.headerAbout {
+    font-weight: bold;
+}
+.moreInformation {
+    grid-column: 2;
+    grid-row: 3;
+    margin-right: 10%;
+    margin-top: 10%;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 100%;
+    padding: 10%;
+}
+.projectButton {
+    grid-column: 2;
+    grid-row: 4;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 100%;
+    padding: 10%;
+    margin-bottom: 15%;
+}
+
+
+/*Positioned my pictures on the about page and changed size and radius.*/
+.meWithProduct {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    place-items: center;
+    margin-top: 20%;
+}
+.meWithProduct img {
+    width: 80%;
+    height: 90%;
+    border-radius: 5%;
+}
+.switzerland {
+    grid-column: 1;
+    grid-row: 3;
+    display: grid;
+    place-items: center;
+    margin-top: 10%;
+}
+.switzerland img {
+    width: 80%;
+    height: 90%;
+    border-radius: 5%;
+}
+
+
+/*Positioned my content on the project page and changed font.*/
+.projectPresentation {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 10%;
+    margin-top: 20%;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 100%;
+    padding: 10%;
+}
+.headerProject {
+    font-weight: bold;
+}
+.imageText {
+    font-style: italic;
+    margin-top: -5%;
+}
+.contactButton {
+    grid-column: span 2;
+    grid-row: 3;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 100%;
+    padding: 10%;
+    margin-bottom: 2%;
+}
+
+
+/*Positioned my picture on the project page and changed size and radius.*/
+.imageCommunity {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    place-items: center;
+    margin-top: 20%;
+}
+.imageCommunity img {
+    width: 90%;
+    height: 85%;
+    border-radius: 5%; 
+}
+
+
+/*Positioned and designed my contact form on the contact page.*/
+.contactForm {
+    grid-column: span 2;
+    grid-row: 2;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 10%;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 100%;
+}
+fieldset {
+    border: 3px solid rgb(99, 23, 99);
+    border-radius: 10%;
+    padding: 10%;
+}
+legend {
+    padding: 1%;
+    letter-spacing: 0.2em;
+}
+input:focus, input:hover {
+    background-color: rgb(235, 235, 235);
+}
+textarea:focus, textarea:hover {
+    background-color: rgb(235, 235, 235);
+}
+.sendButton, button {
+    background-color: rgb(99, 23, 99);
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 17px;
+    color: white;
+    border-color: rgb(99, 23, 99);
+    margin-top: 5%;
+}
+button {
+    float: right;
+}
+textarea {
+    width: 100%;
+}
+input {
+    border-style: none;
+    border-bottom-style: solid;
+}
+.sendButton:hover, button:hover {
+    background-color: rgb(99, 23, 99);
+    text-decoration: underline;
+}
+.sendButton:active, button:active {
+    color: orange;
+}
+
+
+/*Positioned the bottom text and button and changed font.*/
+.homeButton {
+    grid-column: span 2;
+    grid-row: 3;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 100%;
+    padding: 10%;
+    margin-left: 20%;
+}
+
+
+/*Added media queries for sligthly alterted design for under 1300px.*/
+@media screen and (max-width: 1300px) {
+  .imageofme img {
+    width: 80%;
+    height: 90%;
+  }
+  .topborder {
+    width: 63%;
+}
+.firstmenu {
+    margin-left: 50%;
+}
+.firstmenu a, .secondmenu a {
+    font-size: 80%;
+    letter-spacing: 0.1em;
+    line-height: 2em;
+}
+.meWithProduct img {
+    width: 90%;
+    height: 80%;
+}
+.switzerland img {
+    width: 100%
+}
+.projectButton {
+    line-height: 3em;
+}
+}
+
+
+/*Added media queries for mobile view under 700px.*/
+@media screen and (max-width:700px) {
+    .firstmenu a, .secondmenu a { /*Changed the design of the menu to buttons.*/
+        display: inline-block;
+        background-color: rgb(99, 23, 99);
+        padding: 8px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 5px;
+        font-size: 12px;
+        color: white;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        width: 130px;
+        text-align: center;
+    }
+    .grid-container { /*Made a one column grid and re-positions the content.*/
+        grid-template-columns: 100%;
+    }
+    .topborder {
+        position: absolute;
+        width: 120%;
+        left: -10%;
+        top: -1%;
+        background: linear-gradient(to right, rgb(57, 13, 57), rgb(99, 23, 99) 40%);
+    }
+    header {
+        text-align: center;
+        margin-left: 0;
+        font-size: 85%;
+    }
+    .menu {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        background-color: transparent;
+        position: absolute;
+        width: 100%;
+        border-bottom-left-radius: none;
+        border-bottom-style: none;
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 20%;
+    }
+    .firstmenu {
+        grid-column: 1;
+        grid-row: 2;
+        margin-left: -35%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .secondmenu {
+        grid-column: 2;
+        grid-row: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10%;
+    }
+    .presentation {
+        grid-row: 4;
+        margin-left: 0%;
+        margin-top: 60%;
+        font-size: 90%;
+        padding: 2%;
+    }
+    .aboutbutton {
+        grid-row: 6;
+        margin-left: 0%;
+        padding: 2%;
+        margin-bottom: 25%;
+        margin-top: 10%;
+        font-size: 90%;
+    }
+    .imageofme {
+        grid-column: 1;
+        grid-row: 5;
+        margin-top: 5%;
+    }
+    .imageofme img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0%;
+    }
+    .information {
+        grid-row: 4;
+        margin-left: 0%;
+        margin-top: 60%;
+        font-size: 90%;
+        padding: 2%;
+    }
+    .meWithProduct {
+        grid-column: 1;
+        grid-row: 5;
+        margin-top: 5%;
+    }
+    .meWithProduct img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0%;
+    }
+    .moreInformation {
+        grid-column: 1;
+        grid-row: 6;
+        margin-right: 0%;
+        margin-top: 20%;
+        font-size: 90%;
+        padding: 2%;
+    }
+    .switzerland {
+        grid-column: 1;
+        grid-row: 7;
+        margin-top: 5%;
+    }
+    .switzerland img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0%;
+    }
+    .projectButton {
+        grid-column: 1;
+        grid-row: 8;
+        font-size: 90%;
+        padding: 2%;
+        margin-bottom: -25%;
+        margin-top: 10%;
+        line-height: 3em;
+    }
+    .projectPresentation {
+        grid-row: 4;
+        margin-left: 0%;
+        margin-top: 60%;
+        font-size: 90%;
+        padding: 2%;
+    }
+    .imageCommunity {
+        grid-column: 1;
+        grid-row: 5;
+        margin-top: 5%;
+    }
+    .imageCommunity img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0%; 
+    }
+    .imageText {
+        margin-top: 1%;
+        font-size: 14px;
+    }
+    .contactButton {
+        grid-column: 1;
+        grid-row: 6;
+        font-size: 90%;
+        padding: 2%;
+        margin-bottom: 25%;
+        line-height: 2.5em;
+    }
+    input {
+        width: 100%;
+    }
+    .contactForm {
+        grid-column: 1;
+        grid-row: 4;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 60%;
+        font-size: 90%;
+        margin-bottom: 25%;
+    }
+    .homeButton {
+        grid-column: 1;
+        grid-row: 5;
+        font-size: 90%;
+        padding: 2%;
+        margin-left: 0%;
+        margin-bottom: 50%;
+    }
+    button {
+        float: right;
+        width: 100%;
+    }
+    footer {
+        margin-left: 10%;
+    }
+}
+
+
+/*Designed a tablet view between 700px and 961px with media queries.*/
+/*Almost same as mobile view but bigger sizes of text and menu buttons.*/
+@media screen and (min-width:700px) and (max-width:961px) {
+    .firstmenu a, .secondmenu a {
+        display: inline-block;
+        background-color: rgb(99, 23, 99);
+        padding: 8px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 5px;
+        font-size: 25px;
+        color: white;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        width: 300px;
+        text-align: center;
+    }
+    .grid-container {
+        grid-template-columns: 100%;
+    }
+    .topborder {
+        position: absolute;
+        width: 120%;
+        left: -10%;
+        top: -1%;
+        background: linear-gradient(to right, rgb(57, 13, 57), rgb(99, 23, 99) 40%);
+    }
+    header {
+        text-align: center;
+        margin-left: 0;
+        font-size: 120%;
+    }
+    .menu {
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        background-color: transparent;
+        position: absolute;
+        width: 100%;
+        border-bottom-left-radius: none;
+        border-bottom-style: none;
+        grid-column: 1;
+        grid-row: 2;
+        margin-top: 15%;
+    }
+    .firstmenu {
+        grid-column: 1;
+        grid-row: 2;
+        margin-left: -20%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .secondmenu {
+        grid-column: 2;
+        grid-row: 2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0%;
+    }
+    .presentation {
+        grid-row: 4;
+        margin-left: 0%;
+        margin-top: 45%;
+        font-size: 120%;
+        padding: 2%;
+    }
+    .aboutbutton {
+        grid-row: 6;
+        margin-left: 0%;
+        padding: 2%;
+        margin-bottom: 15%;
+        margin-top: 10%;
+        font-size: 120%;
+    }
+    .imageofme {
+        grid-column: 1;
+        grid-row: 5;
+        margin-top: 5%;
+    }
+    .imageofme img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0%;
+    }
+    .information {
+        grid-row: 4;
+        margin-left: 0%;
+        margin-top: 45%;
+        font-size: 120%;
+        padding: 2%;
+    }
+    .meWithProduct {
+        grid-column: 1;
+        grid-row: 5;
+        margin-top: 5%;
+    }
+    .meWithProduct img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0%;
+    }
+    .moreInformation {
+        grid-column: 1;
+        grid-row: 6;
+        margin-right: 0%;
+        margin-top: 15%;
+        font-size: 120%;
+        padding: 2%;
+    }
+    .switzerland {
+        grid-column: 1;
+        grid-row: 7;
+        margin-top: 5%;
+    }
+    .switzerland img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0%;
+    }
+    .projectButton {
+        grid-column: 1;
+        grid-row: 8;
+        font-size: 120%;
+        padding: 2%;
+        margin-bottom: -25%;
+        margin-top: 10%;
+        line-height: 3em;
+    }
+    .projectPresentation {
+        grid-row: 4;
+        margin-left: 0%;
+        margin-top: 45%;
+        font-size: 120%;
+        padding: 2%;
+    }
+    .imageCommunity {
+        grid-column: 1;
+        grid-row: 5;
+        margin-top: 5%;
+    }
+    .imageCommunity img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0%; 
+    }
+    .imageText {
+        margin-top: 1%;
+        font-size: 20px;
+    }
+    .contactButton {
+        grid-column: 1;
+        grid-row: 6;
+        font-size: 120%;
+        padding: 2%;
+        margin-bottom: 15%;
+        line-height: 2.5em;
+    }
+    input {
+        width: 100%;
+    }
+    .contactForm {
+        grid-column: 1;
+        grid-row: 4;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-top: 45%;
+        font-size: 120%;
+        margin-bottom: 25%;
+    }
+    .homeButton {
+        grid-column: 1;
+        grid-row: 5;
+        font-size: 120%;
+        padding: 2%;
+        margin-left: 0%;
+        margin-bottom: 30%;
+    }
+    button {
+        float: right;
+        width: 100%;
+    }
+    footer {
+        margin-left: 10%;
+        font-size: 100%;
+    }
+    .connect {
+        font-size: 100%;
+        padding: 8%;
+        margin-left: 30%;
+    }
+    .logo {
+        font-size: 150%;
+        margin-left: 60%;
+    }
+    footer a {
+        font-size: 100%;
+    }
+}
