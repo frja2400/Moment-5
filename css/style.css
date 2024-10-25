@@ -83,9 +83,7 @@ header a {
 .firstmenu a:hover, .secondmenu a:hover {
     text-decoration: underline;
 }
-.firstmenu a:active, .secondmenu a:active {
-    color: orange;
-}
+
 
 
 /*Positioned my content on the start page and changed font.*/
@@ -211,18 +209,13 @@ footer a {
     font-family: Verdana, Arial, sans-serif;
     font-size: 90%;
 }
-footer a:active {
-    color: orange;
-}
 .fa-linkedin {
     color: white;
-}
-.fa-linkedin:active {
-    color: orange;
 }
 .logo a {
     text-decoration: none;
 }
+
 
 
 /*Positioned my content on the about page and changed font.*/
